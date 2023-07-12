@@ -1,0 +1,6 @@
+E:\C#\ConsoleAppInicial\Componentes\bin\Debug\Componentes.dll
+E:\C#\ConsoleAppInicial\Componentes\bin\Debug\Componentes.pdb
+E:\C#\ConsoleAppInicial\Componentes\obj\Debug\Componentes.csproj.AssemblyReference.cache
+E:\C#\ConsoleAppInicial\Componentes\obj\Debug\Componentes.csproj.CoreCompileInputs.cache
+E:\C#\ConsoleAppInicial\Componentes\obj\Debug\Componentes.dll
+E:\C#\ConsoleAppInicial\Componentes\obj\Debug\Componentes.pdb

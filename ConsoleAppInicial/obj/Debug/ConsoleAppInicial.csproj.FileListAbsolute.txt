@@ -1,0 +1,10 @@
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\bin\Debug\ConsoleAppInicial.exe.config
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\bin\Debug\ConsoleAppInicial.exe
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\bin\Debug\ConsoleAppInicial.pdb
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\obj\Debug\ConsoleAppInicial.csproj.AssemblyReference.cache
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\obj\Debug\ConsoleAppInicial.csproj.CoreCompileInputs.cache
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\obj\Debug\ConsoleAppInicial.exe
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\obj\Debug\ConsoleAppInicial.pdb
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\bin\Debug\Componentes.dll
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\bin\Debug\Componentes.pdb
+E:\C#\ConsoleAppInicial\ConsoleAppInicial\obj\Debug\ConsoleAppInicial.csproj.CopyComplete
