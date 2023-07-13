@@ -12,11 +12,19 @@ namespace ConsoleAppInicial
     {
         static void Main(string[] args)
         {
-            var cachorro = new Cachorro();
-            cachorro.Idade = 1;
-            Console.WriteLine(cachorro.Idade);
-            /*
-            //Menu.Criar();
+            Menu.Criar();
+            
+        }
+    }
+}
+#region Códigos de teste das aulas de Orientação a Objetos
+/*
+            Email.Instancia.Corpo = "Aqui tem o corpo do email";
+            Email.Instancia.Assunto = "Assunto do email";
+            Email.Instancia.Origem = "@hotmail.com";
+            Email.Instancia.Destino = "@gmail.com";
+
+            Email.Instancia.EnviarEmail();
 
             Console.WriteLine("===============Cadastro de Cliente===============");
             Cliente c = new Cliente();
@@ -46,6 +54,4 @@ namespace ConsoleAppInicial
                 Console.WriteLine("--------------------------");
             }
             */
-        }
-    }
-}
+#endregion

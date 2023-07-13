@@ -14,6 +14,9 @@ namespace Tela
         public const int TABUADA = 2;
         public const int CALCULO_MEDIA = 3;
         public const int CADASTRAR_CLIENTES = 4;
+        public const int CADASTRAR_USUARIO = 5;
+        public const int CADASTRAR_FORNECEDOR = 6;
+
 
         public static void Criar()
         {
@@ -27,6 +30,8 @@ namespace Tela
                     2 - Para executar a tabuada;
                     3 - Calcular média de Alunos;
                     4 - Cadastrar clientes;
+                    5 - Cadastrar usuários;
+                    6 - Cadastrar fornecedores;
                     ";
                 Console.WriteLine(mensagem);
 
@@ -40,9 +45,19 @@ namespace Tela
                     Console.WriteLine("---------------------------------------");
                 }
 
-                else if(valor == CADASTRAR_CLIENTES)
+                else if (valor == CADASTRAR_CLIENTES)
                 {
                     TelaCliente.Chamar();
+                    Console.WriteLine("---------------------------------------");
+                }
+                else if (valor == CADASTRAR_USUARIO)
+                {
+                    TelaUsuario.Chamar();
+                    Console.WriteLine("---------------------------------------");
+                }
+                else if (valor == CADASTRAR_FORNECEDOR)
+                {
+                    TelaFornecedor.Chamar();
                     Console.WriteLine("---------------------------------------");
                 }
             }

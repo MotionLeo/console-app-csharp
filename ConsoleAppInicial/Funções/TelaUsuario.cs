@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Funções
 {
-    class TelaCliente
+    class TelaUsuario
     {
         public static void Chamar()
         {
-            Console.WriteLine("--------------Cadastro de cliente--------------");
+            Console.WriteLine("--------------Cadastro de Usuário--------------");
 
             while (true)
             {
                 string mensagem = @"Digite uma das opções abaixo:
                     0 - Sair do cadastro;
-                    1 - Para cadastrar clientes;
-                    2 - Para listar clientes;
+                    1 - Para cadastrar Usuários;
+                    2 - Para listar Usuários;
                     ";
                 Console.WriteLine(mensagem);
 
@@ -28,24 +28,24 @@ namespace Funções
 
                 else if (valor == 1)
                 {
-                    var cliente = new Cliente();
+                    var usuario = new Usuario();
 
-                    Console.WriteLine("Digite o nome do cliente: ");
-                    cliente.Nome = Console.ReadLine();
+                    Console.WriteLine("Digite o nome do Usuário: ");
+                    usuario.Nome = Console.ReadLine();
 
-                    Console.WriteLine("Digite o telefone do cliente: ");
-                    cliente.Telefone = Console.ReadLine();
+                    Console.WriteLine("Digite o telefone do Usuário: ");
+                    usuario.Telefone = Console.ReadLine();
 
-                    Console.WriteLine("Digite o CPF do cliente: ");
-                    cliente.Cpf = Console.ReadLine();
+                    Console.WriteLine("Digite o CPF do Usuário: ");
+                    usuario.Cpf = Console.ReadLine();
 
-                    cliente.Gravar();
+                    usuario.Gravar();
                 }
 
                 else if (valor == 2)
                 {
-                    var clientes = new Cliente().Ler();
-                    foreach (Cliente c in clientes)
+                    var Usuarios = new Usuario().Ler();
+                    foreach (Usuario c in Usuarios)
                     {
                         Console.WriteLine("-------------------");
                         Console.WriteLine("Nome: "+ c.Nome);

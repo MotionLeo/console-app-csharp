@@ -8,46 +8,53 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    public abstract class Base : IPessoa
+    public class Fornecedor : Base
     {
-        public Base() { }
-        public Base(string nome, string telefone, string cpf)
+        public Fornecedor() { }
+
+        public string Cnpj;
+        /// <summary>
+        /// Construtor de classe (usando overload)
+        /// </summary>
+        /// <param name="nome">Para preencher o nome do objeto</param>
+
+        public Fornecedor(string nome)
+        {
+            this.Nome = nome;
+        }
+        /// <summary>
+        /// Construtor da classe com todos os parâmetros (usando overload)
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="telefone"></param>
+        /// <param name="cpf"></param>
+
+        public Fornecedor(string nome, string telefone, string cpf, string cnpj)
         {
             this.Nome = nome;
             this.Telefone = telefone;
             this.Cpf = cpf;
+            this.Cnpj = cnpj;
         }
 
-        public string Nome;
-        public string Telefone;
-        public string Cpf;
-
-        public void SetNome(string nome) { this.Nome = nome;  }
-        public void SetTelefone(string telefone) { this.Telefone = telefone; }
-        public void SetCpf(string cpf) { this.Cpf = cpf; }
-
-        public virtual void Gravar()
+        public override void Gravar()
         {
 
             var listaBase = this.Ler();
             listaBase.Add(this);
-            
+
             StreamWriter r = new StreamWriter(DiretorioComArquivo());
-            r.WriteLine("nome;telefone;cpf;");
-            foreach (Base b in listaBase)
+            r.WriteLine("nome;telefone;cpf;cnpj");
+            foreach (Fornecedor b in listaBase)
             {
-                var novaLinha = b.Nome + ";" + b.Telefone + ";" + b.Cpf + ";";
+                var novaLinha = b.Nome + ";" + b.Telefone + ";" + b.Cpf + ";" + b.Cnpj + ";";
                 r.WriteLine(novaLinha);
             }
             r.Close();
-            
-        }
-        internal string DiretorioComArquivo()
-        {
-            return ConfigurationManager.AppSettings["Bd"] + this.GetType().Name + ".txt";
+
         }
 
-        public virtual List<IPessoa> Ler()
+        public override List<IPessoa> Ler()
         {
             var dados = new List<IPessoa>();
             if (File.Exists(DiretorioComArquivo()))
@@ -61,10 +68,12 @@ namespace Classes
                         i++;
                         if (i == 1) continue;
                         var baseArquivo = linha.Split(';');
-                        var based = (IPessoa)Activator.CreateInstance(this.GetType());
+                        var based = (Fornecedor)Activator.CreateInstance(this.GetType());
                         based.SetNome(baseArquivo[0]);
                         based.SetTelefone(baseArquivo[1]);
                         based.SetCpf(baseArquivo[2]);
+                        based.Cnpj = baseArquivo[3];
+
                         /*var based = new Base
                         {
                             Nome = baseArquivo[0],
